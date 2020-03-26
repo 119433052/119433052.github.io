@@ -1,0 +1,112 @@
+
+/* Setting the font size, family and colour of my main headers*/
+.headers {
+	font-size: 25px;
+	font-family: Georgia, serif;
+	color: #99024e;
+}
+
+.header1 {
+	color: #d97f0f:
+}
+
+.title {
+	font-size: 45px;
+	font-weight: bold;
+	color: #99024e;
+	
+}
+.title2 {
+	color: #99024e;
+}
+
+ /* Styling my table body and taking away the border */
+ .mytable{
+	 background: #FFFFFF;
+	 border-collapse: collapse;
+	 width: 60%;
+	 
+ }
+ /* Making the first row of the table a darker pink and bold font */
+ .tablehead {
+	 background: #FFB6C1;
+	 font-weight: bold;
+ }
+ /* Making a container for my interests and my CV information. This will be a light wink and take up 70% of the width of the page */
+ .container {
+	 width: 70%;
+	 height: auto;
+	 padding: 40px;
+	 background: #ffd2dd;
+	 display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+ }
+ /* Making a pale yellow container for my EBusiness. This will be use for the 3 pages */
+  .consultingcontainer {
+	 width: 70%;
+	 height: auto;
+	 padding: 40px;
+	 background: #fff4d2; 
+	 display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+ }
+/* Making the CVNav button and giving it a a gradient. Also giving it proper padding and font size */
+.myButton {
+    color: #0e0e0e;
+    font-size: 24px;
+    line-height: 1;
+    padding: 12px;
+    border-radius: 50px;
+    font-family: Georgia, serif;
+   background-image: linear-gradient(#ec84b8 0%, #ffb6c1 50%, #e466a6 100%);
+    box-shadow: rgb(153, 170, 187h) 5px 5px 15px 5px;
+    border: 2px solid #fffafa;
+    display: inline-block;
+}
+/* Making the button hover*/
+.myButton:hover {
+background: #1C6EA4; }
+.myButton:active {
+background: #144E75; }
+/* Styling my Consulting page navigation buttons */
+.myButton3 {
+    color: #0e0e0e;
+    font-size: 24px;
+    line-height: 1;
+    padding: 12px;
+    border-radius: 50px;
+    font-family: Georgia, serif;
+    background-image: linear-gradient(#f9ff45 0%, #ffc91d 50%, #e09f51 100%);
+    box-shadow: rgb(153, 170, 187h) 5px 5px 15px 5px;
+    border: 2px solid #fffafa;
+    display: inline-block;
+}
+
+.myButton3:hover {
+background: #1C6EA4; }
+.myButton3:active {
+background: #144E75; }
+
+/* styling my main navigation buttons white with a pink border and setting the font size and padding */
+.myButtonnav {
+   color: rgb(255, 255, 255);
+    font-size: 35px;
+    line-height: 30px;
+    padding: 30px;
+    border-radius: 0px;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    border: 2px solid #cc5691;
+    display: inline-block;
+}
+ }
+
+.myButtonnav:hover {
+background: #1C6EA4; }
+.myButtonnav:active {
+background: #144E75; }

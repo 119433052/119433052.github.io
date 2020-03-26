@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+	<html lang="en" >
+	<link rel="stylesheet" type="text/css" href="design.css">
+		<!--setting the background image to marble-->
+		<style>
+		body{
+		 background-image: url("https://trendy.allani.pl/wp-content/uploads/2016/04/shutterstock_376812382.jpg");
+		 }
+		 </style>
+			<head>
+				<meta charset="UTF-8">
+				<div class="navigation" style="text-align: center;;" >
+				<br />
+					<br />
+					<!--Adding my main navigation buttons-->
+					<button class="myButtonnav" style="margin:8px;"><a href="./index.html">Home</a></button>
+					<button class="myButtonnav" style="margin:8px;"><a href="./CVPersonalInfo.html">My CV</a></button>
+					<button class="myButtonnav" style="margin:8px;"><a href="./Interests.html">My Interests</a></button>
+					<button class="myButtonnav" style="margin:8px;"><a href="./AboutUs.html">EBusiness</a></button>
+					
+				</div>
+				<!--Adding my title-->
+				<title>Walsh Consulting</title>
+			
+			</head>
+
+			<body>
+			
+				<!--Adding my consulting navigation buttons-->
+				<br />
+				
+				<div id="ConsultingNav" style="text-align: center;" >
+					<button class="myButton3" ><a href="./AboutUs.html">About Us </a></button>
+					<button class="myButton3"><a href="./Consulting.html">About Consulting</a></button>
+					<button class="myButton3"><a href="./EBus1.html">Services</a></button>
+				</div>
+				<br />
+				<div class="consultingcontainer">
+				<!--Putting my calculater into my consultingcontainer-->
+				<div class="form">
+		<form name="intCalc" method="post" action="eBus2.php">
+			 <center>
+            <h1>Walsh Consulting Services</h1>    
+                </center>
+        <hr>
+        <center>
+            <table cellspacing="20">
+                <tbody><tr>
+                    <td><b>Package</b></td>
+                </tr>
+                <tr>
+                    <td>Hyperautomation @ $200</td>
+                    <td><input type="radio" id="Hyperautomation" name="rdoGroup" value="200" required=""></td>
+                </tr>
+                <tr>
+                    <td>Multiexperience @ $500</td>
+                    <td><input type="radio" id="Multiexperience" name="rdoGroup" value="500"></td>
+                </tr>
+                <tr>
+                    <td>Distributed Cloud @ $1000</td>
+                    <td><input type="radio" id="DistributedCloud" name="rdoGroup" value="1000"></td>
+                </tr>
+            </tbody></table>
+        </center>
+	<br>
+            <center>
+                 <table cellspacing="10">
+            <tbody><tr>
+                    <td><b></b></td>
+                    <td><b>Amount</b></td>
+            </tr>
+                <tr>
+                    <td>Sub Total</td>
+                    <td><input type="text" id="txtSubTot" name="txtSub" readonly="" required=""></td>
+                </tr>
+                <tr>
+                    <td>- Discount @ 5%</td>
+                    <td><input type="text" id="txtDisc" name="txtDisc" readonly="" required=""></td>
+                </tr>
+                <tr>
+                    <td>+ VAT @ 20%</td>
+                    <td><input type="text" id="txtVAT" name="txtVAT" readonly="" required=""></td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td><input type="text" id="txtTotal" name="txtTotal" value="" readonly="" required=""></td>
+                </tr>
+            </tbody></table>
+        </center>
+       
+        <br>
+            <center>
+            
+					<input type="button" name="btnCalc" id="btnCalc" onclick="calcSub()" style="border-color: green; border-radius: 25px; background-color: white; color: green; font-size: 20px;" value="Calculate Amount" >
+					<input type="reset" name="btnClear" id="btnClear" style="border-color:red; border-radius: 25px; background-color: white; color:red; font-size: 20px;" value="Clear" >
+
+		</center>
+		</form>	
+		<script>
+		
+		function calcSub() { //function definition
+			var argSelection = parseFloat(document.getElementById('txtSubTot').value);
+                    var Hyperautomation = parseFloat(document.getElementById('Hyperautomation').value);
+                    var Multiexperience = parseFloat(document.getElementById('Multiexperience').value);
+                    var DistributedCloud = parseFloat(document.getElementById('DistributedCloud').value);
+
+			if(document.getElementById('Hyperautomation').checked) {
+			document.intCalc.txtSubTot.value = Hyperautomation;
+			argSelection = Hyperautomation;
+			calcVatTotal(argSelection);
+			} 
+			else if (document.getElementById('Multiexperience').checked) {
+			document.intCalc.txtSubTot.value = Multiexperience;
+			argSelection = Multiexperience;
+			calcVatTotal(argSelection);
+			} 
+			else if (document.getElementById('DistributedCloud').checked) {
+			document.intCalc.txtSubTot.value = DistributedCloud;
+			argSelection = DistributedCloud;
+			calcVatTotal(argSelection);
+			
+			} // end of if statement 
+
+		} //end of calSub function
+
+	
+		 function calcVatTotal(parmSelection) { // function definition
+		    var argsubTotal = parseFloat(parmSelection);
+                    var argdiscountAmt = parseFloat(argsubTotal * .05);
+                    var argvatAmt = parseFloat((argsubTotal - argdiscountAmt) * .20);    
+                    var argtotalPrice = parseFloat(argsubTotal - argdiscountAmt + argvatAmt);
+
+			calcDisp(argsubTotal, argdiscountAmt, argvatAmt, argtotalPrice);
+		} //end of calcVatTotal function 
+
+ 
+
+		 function calcDisp(parmsubTotal, parmdiscountAmt, parmvatAmt, parmtotalPrice) { //function defintion
+			document.intCalc.txtSubTot.value = parmsubTotal;
+			document.intCalc.txtDisc.value = parmdiscountAmt;
+			document.intCalc.txtVAT.value = parmvatAmt;
+			document.intCalc.txtTotal.value = parmtotalPrice;		
+		
+		} //end of calcDisp function
+	
+	</script>
+			</body>
+
+	</html>

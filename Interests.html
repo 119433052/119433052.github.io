@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<!--setting the background image to marble-->
+		<style>
+		body{
+		 background-image: url("https://trendy.allani.pl/wp-content/uploads/2016/04/shutterstock_376812382.jpg");
+		 }
+		 </style>
+		<!--Linking my stylesheet-->
+		<link rel="stylesheet" type="text/css" href="design.css">
+			<title >My Interests</title>
+		<head>
+			<meta charset="UTF-8">
+			<br />
+			<br />
+			<!-- Adding my navigation buttons-->
+			<div class="navigation" style="text-align: center;" >
+				<button class="myButtonnav" style="margin:8px;"><a href="./index.html">Home</a></button>
+				<button class="myButtonnav" style="margin:8px;"><a href="./CVPersonalInfo.html">My CV</a></button>
+				<button class="myButtonnav" style="margin:8px;"><a href="./Interests.html">My Interests</a></button>
+				<button class="myButtonnav" style="margin:8px;"><a href="./AboutUs.html">EBusiness</a></button>
+			</div>
+			<!--Adding the header "My Interests" and imbedding style-->
+			<h1 class="headers" style="font-size:40px; text-align: center;"> My Interests </h1>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+					<!--Using imbedded style tags to create an automatic slideshow-->
+					<style>
+					* {box-sizing: border-box;}
+					body {font-family: Verdana, sans-serif;}
+					.mySlides {display: none;}
+					img {vertical-text-align: middle;}
+
+					/* Slideshow container */
+					.slideshow-container {
+					  max-width: 1000px;
+					  position: relative;
+					  margin: auto;
+					}
+
+					/* Numbering the image (1/5) */
+					.numbertext {
+					  color: #f2f2f2;
+					  font-size: 12px;
+					  padding: 8px 12px;
+					  position: absolute;
+					  top: 0;
+					}
+
+					/* Putting dots at the bottom to indicate the number of iamges */
+					.dot {
+					  height: 15px;
+					  width: 15px;
+					  margin: 0 2px;
+					  background-color: #bbb;
+					  border-radius: 50%;
+					  display: inline-block;
+					  transition: background-color 0.6s ease;
+					  text-align: center;
+					}
+
+
+					/* Fading the pictures*/
+					.fade {
+					  -webkit-animation-name: fade;
+					  -webkit-animation-duration: 1.5s;
+					  animation-name: fade;
+					  animation-duration: 1.5s;
+					}
+
+					@-webkit-keyframes fade {
+					  from {opacity: .4} 
+					  to {opacity: 1}
+					}
+
+					@keyframes fade {
+					  from {opacity: .4} 
+					  to {opacity: 1}
+					}
+
+					/* On smaller screens, decrease text size */
+					@media only screen and (max-width: 300px) {
+					  .text {font-size: 11px}
+							}
+			</style>
+			</head>
+			<body>
+					<!--adding my photos, style and text to the slideshow -->
+					<div class="slideshow-container">
+
+					<div class="mySlides fade">
+					  <div class="numbertext">1 / 5</div>
+					  <img src="image1.jpg" style="width:100%" height="400px" width="5px">
+					  <div class="text">Rescue 3 Completion</div>
+					</div>
+
+					<div class="mySlides fade">
+					  <div class="numbertext">2 / 5</div>
+					  <img src="image2.jpg" style="width:100%" height="400px" width="5px">
+					  <div class="text">Water Safety</div>
+					</div>
+
+					<div class="mySlides fade">
+					  <div class="numbertext">3 / 5</div>
+					  <img src="image3.jpg" style="width:100%" height="400px" width="5px">
+					  <div class="text">My Ukulele</div>
+					</div>
+					
+					<div class="mySlides fade">
+					  <div class="numbertext">4 / 5</div>
+					  <img src="image4.jpg" style="width:100%" height="400px" width="5px">
+					  <div class="text">Amsterdam, Holland</div>
+					</div>
+					
+					<div class="mySlides fade">
+					  <div class="numbertext">5 / 5</div>
+					  <img src="image5.jpg" style="width:100%" height="400px" width="5px">
+					  <div class="text">Cap D'Ail, France</div>
+					</div>
+
+
+					</div>
+					<br>
+
+					<div style="text-text-align:center;">
+					  <span class="dot"></span> 
+					  <span class="dot"></span> 
+					  <span class="dot"></span> 
+					  <span class="dot"></span> 
+					  <span class="dot"></span> 
+					</div>
+
+					<script>
+					// Using JavaScript to make my slideshow automatic 
+					var slideIndex = 0;
+					showSlides();
+
+					function showSlides() {
+					  var i;
+					  var slides = document.getElementsByClassName("mySlides");
+					  var dots = document.getElementsByClassName("dot");
+					  for (i = 0; i < slides.length; i++) {
+						slides[i].style.display = "none";  
+					  }
+					  slideIndex++;
+					  if (slideIndex > slides.length) {slideIndex = 1}    
+					  for (i = 0; i < dots.length; i++) {
+						dots[i].className = dots[i].className.replace(" active", "");
+					  }
+					  slides[slideIndex-1].style.display = "block";  
+					  dots[slideIndex-1].className += " active";
+					  setTimeout(showSlides, 2000); // Change image every 2 seconds
+					}
+					</script>
+				<!--Adding my Interests information into a container-->
+				<div class="container">
+					<h2>Travel</h2>
+						<p> One of my many interests is travel. I hope to visit every country in my lifetime and will take every opportunity I have to see the world. My aim for this year is to visit two new countries. This January I had an amazing trip to Amsterdam. It was a great experience to explore the Netherlands with one of my best friends. We visited the Ice Bar, The Heiniken Museum and took a cruise along the Canals. This was amazing because every year Amsterdam host a light festival where different artists from all over the country design lights representing issues such as climate change, the Holocaust and much more. It was a great trip.</p>
+						<p>My love for travel definitely sprung from my family. When I was younger my dad planned amazing holidays to France  or Italy. I loved to explore different cultures and see hiostoric monuments. I remember being amazed by the leaning tower of pisa in Italy and the Arc de Triomph or Eiffle Tower in France. However, my favourite part of each holiday was enjoying the heat by the pool.</p>
+						<p> I first flew alone in 2018 when I flew to Munich, Germany to visit my friend. She had previously been a foreign exchange student at my school who I became very close with. We visited so many places all over Nuremberg and Munich. Besides doing all of the touristy things I also got to visit her school and meet her friends. This was a great time in my life.</p> 
+						<!--Adding unordered lists for the countries that i have travelled to and want to travel to-->
+						<h4> The Countries I have Travelled to so far</h4>
+							<ul>
+								<li>France</li>
+								<li>Italy</li>
+								<li>Germany</li>
+								<li>Holland</li>
+								<li>England</li>
+							</ul>
+						<h4> Some of the countries I soon hope to visit </h4>
+							<ul>
+								<li>Greece</li>
+								<li>Australia</li>
+								<li>America</li>
+								<li>Croatia</li>
+								<li>Poland</li>
+								<li>Japan</li>
+							</ul>
+				
+					<h2>Music and Acting</h2>
+						<p>Another one of my interests is Music. From a young age I have had an interest in Musical Theater and Drama. I have been in many shows such as...
+							<ul>
+								<li>Cinderella Rockerfella</li>
+								<li>Annie</li>
+								<li>The Pied Piper</li>
+								<li>Greece</li>
+								<li>Oliver</li
+							</ul>
+						</p>
+						<p>I have also completed Grade 10 with the Ulster Drama Association, learning many valuable skills such as Improvisation, Public Speaking and Debating. I have taken Drama lessons from first class in primary school all the way up to fifth year in Secondry School</p>
+						<p> Music is also a big part of my life. My favourite genre is Musical Theater as I prefer music with meaning behind the lyrics. One of my dreams is to see a broadway show. Some of the shows that I have oreviously seen are Heathers, Wicked, Mama Mia and elf.I also enjoy playing music. I got my first ukulele for christmas in 2017 and have sucessfully taught myself to play it.</p>
+			
+					<h2>Sport</h2>
+						<p>My favourite sport is swimming. I started swimming from a young age and took lessons at my local leisure center;. After graduating through all the levels of the swim school I began to attend an endurance class called "different strokes". Here I built up endurance and worked on my breathing techniques.</p>
+						<p>At the age of 14 I did my first sponsored swim. I swam 1 kilometer in aid of a local rehab facility. This was a really rewarding experience. I fundraised for my swim and had to swim 40 lanes of the standard 25 meter pool. After this I decided to compete in a few mini triathalons. These are events where you run, cycle and swim all in a row. I had great fun in the triathalons that I competed in, however I am not a runner which became very obvious.</p>
+						<p>In 2015 I took my first Water Safety course. I took this with my sisters and have made friends from it that I still have to this day. In the meantime I have completed Water Safety 1,2,3 and 4, Endurance and Rescue 1,2 and 3. I only have one more cource to complete before I am a certified Life-guard. Through these cources I have learned underwater CPR, how to rescue people from different water accidents and how to act as a lifeguard in a pool. I have also learned how to help people in situations out of the water such as how to call an ambulance and how to perform CPR.</p>
+					
+				</div>
+					
+		</body>
+	</html>
+	
